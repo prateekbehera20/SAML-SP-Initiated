@@ -32,7 +32,6 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.saml.SAMLAuthenticationProvider;
 import org.springframework.security.saml.SAMLBootstrap;
-import org.springframework.security.saml.SAMLDiscovery;
 import org.springframework.security.saml.SAMLEntryPoint;
 import org.springframework.security.saml.SAMLProcessingFilter;
 import org.springframework.security.saml.context.SAMLContextProviderImpl;
@@ -71,7 +70,7 @@ import com.saml.okta.stereotypes.SAMLUserDetailsServiceImpl;
 @EnableWebSecurity
 @Configuration
 @EnableGlobalMethodSecurity(securedEnabled = true)
-public class SAMLSecurityConfiguration extends WebSecurityConfigurerAdapter {
+public class SAMLConfig extends WebSecurityConfigurerAdapter {
 	@Value("${security.saml2.metadata-url}")
 	String metadataUrl;
 
@@ -272,13 +271,6 @@ public class SAMLSecurityConfiguration extends WebSecurityConfigurerAdapter {
 	public SAMLDefaultLogger samlLogger() {
 		return new SAMLDefaultLogger();
 	}
-
-	 /*@Bean
-	    public SAMLDiscovery samlIDPDiscovery() {
-	        SAMLDiscovery idpDiscovery = new SAMLDiscovery();
-	        idpDiscovery.setIdpSelectionPath("/saml/discovery");
-	        return idpDiscovery;
-	    }*/
 	 
 	@Bean
 	public FilterChainProxy samlFilter() throws Exception {
@@ -289,8 +281,6 @@ public class SAMLSecurityConfiguration extends WebSecurityConfigurerAdapter {
 				metadataDisplayFilter()));
 		chains.add(new DefaultSecurityFilterChain(new AntPathRequestMatcher("/saml/SSO/**"),
 				samlWebSSOProcessingFilter()));
-		/*chains.add(new DefaultSecurityFilterChain(new AntPathRequestMatcher("/saml/discovery/**"),
-	                samlIDPDiscovery()));*/
 
 		return new FilterChainProxy(chains);
 	}

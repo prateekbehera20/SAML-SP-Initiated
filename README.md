@@ -10,23 +10,16 @@ Please read [Get Started with Spring Boot, SAML, and Okta](https://developer.okt
 
 * [Getting Started](#getting-started)
 * [Links](#links)
-* [Help](#help)
-* [License](#license)
 
 ## Getting Started
 
 To install this example application, run the following commands:
 
 ```bash
-git clone https://github.com/oktadeveloper/okta-spring-boot-saml-example.git
-cd okta-spring-boot-saml-example
+git clone https://github.com/prateekbehera20/SAML-SP-Initiated.git
 ```
 
-This will get a copy of the project installed locally. To install all of its dependencies and start the app, run:
- 
-```bash
-./mvnw spring-boot:run
-```
+This will get a copy of the project installed locally. To start the app, run it as standard java or spring boot app
 
 ### Create a SAML App in Okta
 
@@ -104,12 +97,3 @@ After you've logged in, you should see a screen like the one below.
 ## Links
 
 This example uses [Spring Security SAML DSL](https://github.com/spring-projects/spring-security-saml-dsl) to integrate with Okta. Kudos to the project's [spring-security-saml-dsl-sample for its instructions](https://github.com/spring-projects/spring-security-saml-dsl/blob/master/samples/spring-security-saml-dsl-sample/README.md).
-
-## Help
-
-Please post any questions as comments on the [blog post](http://developer.okta.com/blog/2017/03/16/spring-boot-saml), or visit our [Okta Developer Forums](https://devforum.okta.com/). You can also email developers@okta.com if would like to create a support ticket.
-
-## License
-
-Apache 2.0, see [LICENSE](LICENSE).
-

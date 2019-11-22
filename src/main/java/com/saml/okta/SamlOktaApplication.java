@@ -1,4 +1,4 @@
-package com.saml.okta.controller;
+package com.saml.okta;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
