@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: SAML Okta Spring Boot
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Prateek
+Implementation-Vendor-Id: com.saml.okta
+Build-Jdk: 1.8.0_172
+Implementation-URL: http://projects.spring.io/spring-boot/saml-okta-sp
+ ring-boot/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
