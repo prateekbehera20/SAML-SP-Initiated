@@ -92,7 +92,7 @@ Next, you'll be redirected to Okta to sign in and redirected back to your app. I
 
 After you've logged in, you should see a screen like the one below.
 
-<img src="static/hello-saml.png" alt="Hello SAML" width="800"/>
+<img src="static/hello-saml.png" alt="SAML Confirmation page" width="800"/>
 
 ## Links
 
