@@ -1,9 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-    <title>Spring Security SAML Example</title>
+<title>SAML2.0 - Okta</title>
 </head>
 <body>
-Hello SAML!
+	<div>
+		<small><strong>Well done!</strong>
+		Your SAML 2.0 authentication process works fine.
+		</small>
+	</div>
+	<br/><br/><br/><br/>
+	<p>You are logged in as <strong><span th:text="${username}">null</span></strong></p>
+		<!-- <div>
+		<a th:href="@{saml/login}"><strong>Get started!</strong></a>
+	</div> -->
 </body>
 </html>
